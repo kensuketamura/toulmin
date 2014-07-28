@@ -1,0 +1,16 @@
+{
+  "name": "Toulmin",
+  "version": "0.0.0",
+  "description": "Toulmin",
+  "main": "app.js",
+  "author": {
+    "name": "Tamura",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*",
+    "socket.io":  "*"
+  }
+}

@@ -1,0 +1,49 @@
+.commentviewpanel
+  - for(var list_i = 0; list_i < comResTest.length; list_i++) {
+  - var main = "";
+  - var cl = "list-group-item ";
+  - var wd = "";
+  case comResType[list_i]
+    when 0
+      - main = "col-xs-11";
+      - cl = cl + "list-group-item-info comment-view";
+    when 1
+      - main = "col-xs-11 col-xs-offset-1";
+      - cl = cl + "list-group-item-danger comment-view";
+  case comResWD[list_i]
+    when 0
+      - wd = "Warrent"
+    when 1
+      - wd = "Data"
+  div(class="#{main}")
+    a(class="#{cl}",id="comment#{list_i}")
+      h6.list-group-item-heading.comment-title #{wd}:
+      h6.list-group-item-heading.comment-date(style="color: #9a9a9a;") #{dates[list_i]}
+      h5.comment-body #{comResTest[list_i]}
+      .comment-footer
+        .text-right
+          button.btn.btn-xs.btn-info.goodbad(type="button",id="comment#{list_i}",value="up")
+            span.glyphicon.glyphicon-thumbs-up
+          span.thumbs-up-num(id="comment#{list_i}")
+            |  #{parseInt(Math.random()*10)}
+          span &ensp;
+          button.btn.btn-xs.btn-danger.goodbad(type="button",id="comment#{list_i}",value="down")
+            span.glyphicon.glyphicon-thumbs-down
+          span.thumbs-down-num(id="comment#{list_i}")
+            |  #{parseInt(Math.random()*10)}
+    - var tmp = list_i;
+    include responseList
+    - list_i = tmp;
+  - };
+.container
+  .comment-view
+    .form-group
+      - var responseType = new Array("Warrant","Data");
+      - for(var checkbox_i = 0; checkbox_i < responseType.length; checkbox_i++) {
+      label.radio-inline
+        input(type="radio" name="responseType")
+        | #{responseType[checkbox_i]}
+      - };
+      textarea.form-control(rows="3",placeholder="")
+    .form-group.text-right
+      button.btn.btn-primary Submit

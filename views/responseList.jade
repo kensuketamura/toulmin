@@ -1,0 +1,16 @@
+- var commentId = "comment" + tmp;
+- var responseId = "response" + tmp;
+.node-panel.collapse(id=commentId)
+  - var cl = "list-group"
+  - var idname = responseId + "-list"
+  ul(class="#{cl}", id=idname)
+    - for(var list_i = 0; list_i < nodebodys[tmp].length; list_i++) {
+      - cl = "list-group-item response-list";
+    a(class="#{cl}",value="##{nodeids[list_i]}")
+      h5.list-group-item-heading #{nodebodys[tmp][list_i]}
+      p.list-group-item-text.text-right.small  #{dates[list_i]}
+      - };
+  .response-form
+      textarea.form-control.input-sm(rows="2",id=responseId)
+      .text-right.response-button(id=responseId)
+        button.btn.btn-xs.btn-primary(type="submit") Submit
