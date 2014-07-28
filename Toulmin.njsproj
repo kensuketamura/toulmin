@@ -43,8 +43,8 @@
     <Content Include="views\_inc_meta_twitter.jade" />
     <Content Include="views\_layout.jade" />
     <TypeScriptCompile Include="app.ts" />
-    <TypeScriptCompile Include="public\js\MainView.ts" />
-    <TypeScriptCompile Include="public\js\script.ts" />
+    <TypeScriptCompile Include="public\clientSrc\MainView.ts" />
+    <TypeScriptCompile Include="public\clientSrc\script.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\user.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
@@ -61,6 +61,7 @@
     <Content Include="views\layout.jade" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="public\clientSrc\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
@@ -74,6 +75,7 @@
     <Folder Include="Scripts\typings\socket.io\" />
     <Folder Include="Scripts\typings\node\" />
     <Folder Include="Scripts\typings\stylus\" />
+    <Folder Include="serverSrc\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
