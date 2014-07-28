@@ -35,7 +35,7 @@
   <ItemGroup>
     <Content Include="views\commentView.jade" />
     <Content Include="views\responseList.jade" />
-    <Content Include="views\Templates.jade" />
+    <Content Include="views\templates.jade" />
     <Content Include="views\_inc_embed_facebook.jade" />
     <Content Include="views\_inc_embed_line.jade" />
     <Content Include="views\_inc_embed_twitter.jade" />

@@ -53,6 +53,11 @@ $(function () {
     $(".response-button").click(function () {
         var commentId = $(this).attr("id");
         var commentValue = document.getElementById(commentId).value;
+        if (!commentValue) {
+            alert("コメントを入力してください");
+            document.getElementById(commentId).focus();
+            return;
+        }
         console.log(commentValue);
         console.log(commentId);
         document.getElementById(commentId).value = "";
