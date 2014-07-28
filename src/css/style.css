@@ -1,0 +1,80 @@
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+.inline {
+  display: inline;
+}
+
+.xauto {
+  min-width: 80%
+}
+
+.float-left {
+  float: left;
+}
+
+.small-text {
+  font-size: small;
+}
+
+.argument-top {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.claim {
+  float: left;
+}
+
+.sub-claim {
+  margin-left: auto;
+  position: absolute;
+  z-index:10;
+  width: 90%;
+
+}
+
+.node-panel {
+  margin: 3px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.comment-title {
+  float: left;
+}
+
+.comment-date {
+  text-align: right;
+
+}
+
+.comment-view {
+  margin: 3px;
+}
+
+.commentviewpanel {
+  margin: 0 auto;
+  height: 70%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.comment-body {
+}
+
+.comment-footer {
+}
+
+.response-list {
+}
+
+.response-form {
+  margin-top: 3px;
+}
+
+.response-button {
+  margin-top: 3px;
+}

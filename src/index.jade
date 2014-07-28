@@ -1,0 +1,60 @@
+doctype html
+html(lang="ja")
+  head
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= pageTitle
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/style.css')
+
+  body
+    - var claim = "英語能力がある";
+    - var nodebodys = new Array();
+    - nodebodys.push(["TOEICにはSpeakingとWritingがない","英語能力に関して分割を行いましょう"]);
+    - nodebodys.push(["二級を持っている"]);
+    - nodebodys.push(["授業では英語能力がはかれない"]);
+    - nodebodys.push(["行き先がインドである"]);
+    - nodebodys.push(["lとrの区別がついていない"]);
+    - var nodeids = new Array("G1", "S1.3", "S2.4");
+    - var types = new Array(1,2,3);
+    - var dates = new Array("14/4/14 10:00","14/4/14 12:00", "14/4/15 11:00" ,"14/4/15 13:00","14/4/15 19:00");
+    - var c0 = "TOEIC800点を取った";
+    - var c1 = "英検を取得していない";
+    - var c2 = "英語の単位が不可だった";
+    - var c3 = "留学経験がある";
+    - var c4 = "発音がいい";
+    - var comResTest = new Array(c0,c1,c2,c3,c4);
+    - var comResType = new Array(0,1,1,0,0);  //0:Agree, 1:Disagree
+    - var comResWD = new Array(1,1,1,1,1);  //0:W, 1:D
+    - var s0 = "英語での会話能力がある";
+    - var s1 = "英語を聞き取る能力がある";
+    - var s2 = "英語を書く能力がある"
+    - var subClaims = new Array(s0,s1,s2);
+
+    .argument-top
+      .container
+        blockquote(style="background-color:#f4f6ff;")
+          h6 Claim:
+          h4.claim #{claim}
+          .text-right
+            .btn-group.btn-group-sm
+              button.btn.btn-info Split
+              button.btn.btn-info.btn-sub-claim
+                span.caret
+        .sub-claim.collapse
+          .list-group
+            - for(var sub_i = 0; sub_i < subClaims.length; sub_i++) {
+            a.list-group-item #{subClaims[sub_i]}
+            - };
+            .list-group-item
+              .form-group.float-left.xauto
+                input.form-control(placeholder="Claimを分割……")
+              .text-right
+                button.btn.btn-xs.btn-primary Split
+
+    include commentView
+
+
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/script.js')
